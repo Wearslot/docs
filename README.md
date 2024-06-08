@@ -1,6 +1,6 @@
 
 
-<img  align="center" src=".\static\img\nav_bar_logo.png" alt="toajaaLogo" width="200" height ="400" />
+<img  align="center" src=".\static\img\nav_bar_logo.png" alt="toajaaLogo" width="400" height ="200" />
 
 
 # TAOJAA  Documentation
