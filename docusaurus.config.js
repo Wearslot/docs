@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'TAOJAA',
   tagline: ' Seamlessy Bring your online Store live with TAOJAA',
-  favicon: 'img/TAOJAA.ico',
+  favicon: 'img/AMOS.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -69,7 +69,7 @@ const config = {
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/taojaa.png',
+          src: 'img/TAOJAAsendRES.png',
         },
         items: [
           {
