@@ -32,7 +32,7 @@ This command generates static content into the `build` directory and can be serv
 Welcome to the source for the [TAOJAA](https://www.taojaa.com/) documentation. Get your online store up and running in no time with our detailed documentation.
 
 
-View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
+View the live docs here: [Replace with doc website link]()
 
 The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, check out their docs.
