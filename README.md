@@ -83,19 +83,9 @@ other category. For example, a tutorial should just step the user through doing
 the work, and should not provide background expanations or other reference
 material or discussion.
 
-In the future, we intend to provide access to all this material in the app, with
-context-sensitive reference materials available for all product and language
-features, and interactive tutorials and how-to guides built-in.
-
 ### Tutorials
 
-- "teaching a child how to cook"
-- tells them what to do
-- does not explain why they are doing it
-- include specifics and let them learn the generalities over time
-- assume that "obvious" things are not known
-- do not include choices
-- should be bulletproof
+- [] consult pelumi
 
 ### How-to guides
 
@@ -117,15 +107,8 @@ features, and interactive tutorials and how-to guides built-in.
 There are two important branches:
 
 - main
-- gh-pages
+- Development
 
-The website is hosted from `gh-pages`, but everything there is auto-generated
-from `main`. When we want to make changes, we create a new branch off `main`
-with the format `username/my-change` and make as many commits as we need to.
-Then, we create a new pull request from that branch with `main` as the base.
-When the pull request is merged, CircleCI will automatically deploy the changes
-from `main` to the website (it runs a script against the source files on `main`
-and deploys the generated website to `gh-pages`).
 
 #### Directory Structure
 
