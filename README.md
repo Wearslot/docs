@@ -115,11 +115,10 @@ There are two important branches:
 
 ```
 project-root/
-├── src/
-│   ├── main.py
-│   ├── module/
-│   │   ├── __init__.py
-│   │   ├── submodule.py
+├── docusaurus/
+├── blog/
+├── docs/
+├── nodemodules/
 ├── src/
 │   ├── components
 │   │   │   ├── index.js
