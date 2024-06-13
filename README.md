@@ -1,11 +1,13 @@
-
-
+<div align="center">
 <img  align="center" src=".\static\img\nav_bar_logo.png" alt="toajaaLogo" width="400" height ="200" />
-
+</div>
+<br><br>
 
 # TAOJAA  Documentation
 
-This website is built using Docusauraus [Docusaurus](https://docusaurus.io/) version V3.4, a modern static website generator.
+This website is built using ![Static Badge](https://img.shields.io/badge/Docusaurus-3.4-brightgreen), a modern static website generator.
+
+
 
 ### Installation
 
