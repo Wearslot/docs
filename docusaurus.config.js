@@ -67,19 +67,28 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
           alt: 'My Site Logo',
           src: 'img/nav_bar_logo.png',
         },
         items: [
+          {to: "setup", label:"How Taojaa Works", position: "left"},
+         
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Apis',
           },
+         
+
           {to: '/blog', label: 'Blog', position: 'left'},
+        
+          {to: 'changelog', label:'Changelog', position: 'left'},
+          
+
+          
           {
             href: 'https://github.com/Wearslot/taojaa-documentation',
             label: 'GitHub',
