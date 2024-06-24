@@ -73,19 +73,50 @@ const config = {
           src: 'img/nav_bar_logo.png',
         },
         items: [
-          {to: "setup", label:"How Taojaa Works", position: "left"},
+          {to: "setup", label:"Getting started with TaoJaa", position: "left"},
          
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Apis',
+            label: 'Apis References',
           },
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'api',
+            position: 'left',
+            label: 'test',
+          },
+
          
+          
+         
+
+        
 
           {to: '/blog', label: 'Blog', position: 'left'},
         
           {to: 'changelog', label:'Changelog', position: 'left'},
+
+
+          // drop down menu
+
+          {
+            type: 'dropdown',
+            label: 'Refrences',
+            position: 'left',
+            items: [
+              {
+                label: 'Getting Started',
+                to: 'docs/intro',
+              },
+              {
+                label: 'Advanced Guides',
+                to: 'docs/intro',
+              },
+            ],
+          },
           
 
           
