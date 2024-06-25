@@ -67,26 +67,43 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Home',
+      //   title: 'Storefront',
         logo: {
           alt: 'My Site Logo',
           src: 'img/nav_bar_logo.png',
         },
         items: [
-          {to: "setup", label:"Getting started with TaoJaa", position: "left"},
+        //   {to: "setup", label:"Storefront", position: "left"},
+
+
          
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'storefront',
             position: 'left',
-            label: 'Apis References',
+            label: 'Storefront',
           },
 
           {
             type: 'docSidebar',
-            sidebarId: 'api',
+            sidebarId: 'refrences',
             position: 'left',
-            label: 'test',
+            label: 'References',
+          },
+
+         
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'References',
+          // },
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'Community',
+            position: 'left',
+            label: 'Community',
           },
 
          
@@ -97,26 +114,26 @@ const config = {
 
           {to: '/blog', label: 'Blog', position: 'left'},
         
-          {to: 'changelog', label:'Changelog', position: 'left'},
+          // {to: 'changelog', label:'Changelog', position: 'left'},
 
 
           // drop down menu
 
-          {
-            type: 'dropdown',
-            label: 'Refrences',
-            position: 'left',
-            items: [
-              {
-                label: 'Getting Started',
-                to: 'docs/intro',
-              },
-              {
-                label: 'Advanced Guides',
-                to: 'docs/intro',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Refrences',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       label: 'Getting Started',
+          //       to: 'docs/intro',
+          //     },
+          //     {
+          //       label: 'Advanced Guides',
+          //       to: 'docs/intro',
+          //     },
+          //   ],
+          // },
           
 
           

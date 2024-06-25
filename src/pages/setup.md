@@ -110,7 +110,7 @@ import Tag from '@site/src/components/HomepageFeatures/tag';
 
         <p style={{ textAlign: 'justify' }}>
         Themes in Taojaa are initialized using a predefined skeleton known as "affluent." This affluent skeleton serves as a comprehensive template that provides a structured and consistent foundation for theme development. It includes essential components, layout configurations, and design elements, ensuring that themes maintain a cohesive and visually appealing appearance. By using the affluent skeleton, developers can streamline the theme creation process, focusing on customization and unique features while adhering to a well-defined and tested framework.
-      </p>
+       </p>
 
         To create a new team use the command: <Tag color = "#A8E480" > taojaa new theme myfirsttheme </Tag>
 
@@ -120,7 +120,7 @@ import Tag from '@site/src/components/HomepageFeatures/tag';
         C:\Users\...> taojaa new theme myfirsttheme
         Creating new theme using affluent...
         Cloning into 'myfirsttheme'...
-      Theme initlized succesfully!
+        Theme initlized succesfully!
         Start building amazing e-commerce experience.
         ```
                 
