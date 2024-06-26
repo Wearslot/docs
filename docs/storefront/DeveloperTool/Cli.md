@@ -1,60 +1,35 @@
-## :wrench: TaoJaa Cli installation
+# Introduction
 <p style={{ textAlign: 'justify' }}>
-The Shopify CLI significantly accelerates your app development process by offering a suite of powerful features designed to enhance 
-</p>
+ Taojaa CLI is more than just a command-line interface; it’s a comprehensive development tool designed to enhance both the developer and user experience. Its extensibility allows for significant customization, enabling developers to tailor their vendor’s store precisely to their needs. By streamlining view template setup, initialization, and authentication, Taojaa CLI facilitates a smoother, more efficient development process, leading to highly functional and user-centric applications. Whether you are just starting a project or looking to optimize an existing one, Taojaa CLI provides the robust features and flexibility needed to succeed in the dynamic world of e-commerce development.
+ </p>
 
-### productivity and streamline workflows:
-
-<p style={{ textAlign: 'justify' }}>
-Rapid Setup: Quickly scaffold new projects with predefined templates, reducing the time required to set up the basic structure of your application.
-</p>
-
-
-### Automated Workflows:
-<p style={{ textAlign: 'justify' }}>
-Integrate automated development workflows that handle common tasks, such as building, testing, and deploying, allowing you to focus on coding.
-</p>
-
-### Seamless Integration: 
-<p style={{ textAlign: 'justify' }}>
-Easily integrate with Shopify's ecosystem, enabling smooth interaction with Shopify APIs, themes, and app configurations.
-</p>
-
-
-### Local Development:
-<p style={{ textAlign: 'justify' }}>
-Facilitate local development with live reloading, enabling real-time updates as you make changes to your code.
-Extensive Documentation and Support: Access comprehensive documentation and support resources to assist with troubleshooting and optimizing your development process.
-</p>
-
-<p style={{ textAlign: 'justify' }}>
-By leveraging the Tao CLI tool and Shopify CLI, developers can significantly enhance their efficiency, maintain consistency across projects, and expedite the overall development lifecycle.
-</p>
-
-
-
-
-
-
- Shopify CLI accelerates your app development process with the following features:
+ Taojaa CLI accelerates your app development process with the following features:
 
  - Anthenticate into vendor stores.
  - Creates new themes.
  - Modifiying  existing themes.
  - Deploys your themes into the vendor store.
- - Lets you search the Shopify.dev docs
 
+
+
+## Requirements
+- Node Packege Manager (npm) 
+- Taojaa Cli
+
+To install Taojaa make use of the following command
 
  ```
  C:\Users\..> npm i  -g taojaa-cli 
 
  ```
 
- :::caution
+
+:::caution
 
  Make use og the -g flag to ensure Taojaa cli is installed globally.
 
  :::
+
 
  After Installing you can use the command taojaa to verify that the taojaa cli has been installed successfully.
  
@@ -62,7 +37,10 @@ By leveraging the Tao CLI tool and Shopify CLI, developers can significantly enh
  C:\Users\..> taojaa 
 
  ```
+
+
  The out put out put from the command is:
+
  ```
  Usage: index [options] [command]
  Options:
@@ -81,7 +59,19 @@ By leveraging the Tao CLI tool and Shopify CLI, developers can significantly enh
  Seeing this output on your terminal implies that the Taojaa cli has successfully been installed on your machine.
 
 
- ## :closed_lock_with_key: TaoJaa Authentication
+
+## initializing a new team
+
+To create a new TaoJaa theme use the command.
+
+ ```
+ C:\Users\..> TaoJaa new theme Myfirst Theme
+
+ ```
+ This theeme would make use of a skelenton known as affluent to initialize the project
+
+
+  ## :closed_lock_with_key: TaoJaa Authentication
 
  <p style={{ textAlign: 'justify' }}>
  Developers must be authorized by TaoJaa Vendors to get access before any modification can be carried on the vendor Taojaa store. Developers should not be able to interact with Vendors TaoJaa store  before completing Authorization. These requirements ensure that developers can quickly set up and begin development on client tajoo stores. This installation guidelines detail the correct processes for authentication,and  any necessary sign-up steps. These guidelines also ensure that vendors receive the guidance they need when they start using your app.
@@ -97,3 +87,22 @@ By leveraging the Tao CLI tool and Shopify CLI, developers can significantly enh
  Authenticated successfully
 
  ```
+
+
+
+
+## Initialize as existing Taojaa Theme
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
