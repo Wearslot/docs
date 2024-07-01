@@ -2,6 +2,7 @@
 title: Overview
 sidebar_position : 1
 ---
+
 <p style={{ textAlign: 'justify' }}>
 Discover the comprehensive process of building an app, theme, custom storefront, or marketplace effortlessly with Taojaa. Whether you are just starting out, deeply engaged in the development phase, or ready to distribute and monetize your creation, Taojaa provides extensive resources and tools designed to streamline and enhance your development journey.
 </p>
