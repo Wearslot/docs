@@ -1,0 +1,7 @@
+.header {
+    border: none;
+    width: 100%;
+    transition: .3s ease;
+    position: fixed;
+    z-index: 2;
+}

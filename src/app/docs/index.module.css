@@ -1,0 +1,13 @@
+.docs {
+  display: grid;
+  max-width: 100%;
+  padding: 0 4rem;
+  padding-top: 76px;
+}
+
+@media (max-width: 1024px) {
+  .docs {
+    padding: 0;
+    padding-top: 76px;
+  }
+}
