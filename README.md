@@ -1,306 +1,36 @@
-<div align="center">
-<img  align="center" src=".\static\img\nav_bar_logo.png" alt="toajaaLogo" width="400" height ="200" />
-</div>
-<br><br>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# TAOJAA  Documentation
+## Getting Started
 
-This website is built using ![Static Badge](https://img.shields.io/badge/Docusaurus-3.4-brightgreen), a modern static website generator.
+First, run the development server:
 
-
-
-### Installation
-
-```
-$ fork this repository
-$ npm install
-$ npm start
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Build
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```
-$ npm start
-```
+## Learn More
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-Welcome to the source for the [TAOJAA](https://www.taojaa.com/) documentation. Get your online store up and running in no time with our detailed documentation.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-View the live docs here: [Replace with doc website link]()
-
-The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
-trying to do something beyond the scope of this README, check out their docs.
-
-## What's In This Document
-
-- [TaoJaa Documentation](#dark-documentation)
-  - [What's In This Document](#whats-in-this-document)
-  - [Get Started in 5 Minutes](#get-started-in-5-minutes)
-  - [Documentation structure](#documentation-structure)
-    - [Tutorials](#tutorials)
-    - [How-to guides](#how-to)
-    - [Explanations](#explanations)
-    - [Reference material](#reference-material)
-  - [Project Structure](#project-structure)
-      - [Directory Structure](#directory-structure)
-  - [Editing Content](#editing-content)
-    - [Editing an existing docs page](#editing-an-existing-docs-page)
-  - [Adding Content](#adding-content)
-    - [Adding a new docs page to an existing sidebar](#adding-a-new-docs-page-to-an-existing-sidebar)
-    - [Adding items to your site's top navigation bar](#adding-items-to-your-sites-top-navigation-bar)
-    - [Adding custom pages](#adding-custom-pages)
-      - [Checking formatting](#checking-formatting)
-  - [How CI Auto-deploys](#how-ci-auto-deploys)
-  - [Publishing Changes Manually](#publishing-changes-manually)
-
-## Get Started in 5 Minutes
-
-To change these docs and test the results locally:
-
-```sh
-npm install
-npm run-script start
-```
-
-## Documentation structure
-
-Darklang's documentation is organized into four categories:
-
-- tutorials
-- how-to guides
-- background information and discussion
-- reference material
-
-This follows the [Divio Documentation System](https://documentation.divio.com/).
-Using this system, documentation in each category should not do the work of any
-other category. For example, a tutorial should just step the user through doing
-the work, and should not provide background expanations or other reference
-material or discussion.
-
-### Tutorials
-
-- [] consult pelumi
-
-### How-to guides
-
-- "recipes"
-- should have very specific names such as "how to add a custom domain to Darklang"
-
-### Explanations
-
-- background material to understand further
-- provides context
-
-### Reference material
-
-- just descriptions
-- follows the structure of the project/language (e.g. each type is represented)
-
-## Project Structure
-
-There are two important branches:
-
-- main
-- Development
-
-
-#### Directory Structure
-
-
-```
-project-root/
-├── docusaurus/
-├── blog/
-├── docs/
-├── nodemodules/
-├── src/
-│   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── style.css
-│   ├── css/
-│   │   ├──custom.css
-│   ├── pages/
-│   │   ├── index.js
-│   │   ├── index.modules.css
-│   │   ├── markdown-page.md
-├── static/
-│   ├── img
-│   ├── .nojekyll
-├── .gitignore
-├── packege-lock.json
-├── package.json
-├── README.md
-├── sidebar.js
-
-```
-The project file structure in `main` is
-
-```text
-docs/
-  README.md -- this file
-
-  .circleci/config.yml -- used to autodeploy via circle ci
-
-  .gitignore -- ignores autogenerated files that shouldn't sync via git
-
-  .spelling -- a place to add words not in a standard dictionary
-
-  docs/ -- individual markdown documentation pages
-    changelog.md
-    getting-started.md
-    ...
-
-  src/
-    css/
-    plugins/ -- docusaurus plugins
-
-  package.json -- helper scripts
-
-  docusaurus.config.js -- core site configuration
-
-  sidebars.json -- sidebar sections and pages
-
-  static/
-    img/ -- static images, for posts, and also favicon.ico
-    slack-apps/
-    tutorials/
-    index.html
-    CNAME
-    .nojekyll
-
-  node_modules/
-```
-
-## Editing Content
-
-### Editing an existing docs page
-
-Edit docs by navigating to `docs/` and editing the corresponding document:
-
-`docs/doc-to-be-edited.md`
-
-```markdown
----
-id: page-needs-edit
-title: This Doc Needs To Be Edited
----
-
-Edit me...
-```
-
-For more information about docs, click
-[here](https://docusaurus.io/docs/en/navigation)
-
-## Adding Content
-
-### Adding a new docs page to an existing sidebar
-
-1. Create the doc as a new markdown file in `/docs`, example
-   `docs/newly-created-doc.md`:
-
-```md
----
-id: newly-created-doc
-title: This Doc Needs To Be Edited
----
-
-My new content here..
-```
-
-2. Refer to that doc's ID in an existing sidebar in `sidebars.json`:
-
-```javascript
-// Add newly-created-doc to the Getting Started category of docs
-{
-  "docs": {
-    "Getting Started": [
-      "quick-start",
-      "newly-created-doc" // new doc here
-    ],
-    ...
-  },
-  ...
-}
-```
-
-For more information about adding new docs, click
-[here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
-
-### Adding items to your site's top navigation bar
-
-1. Add links to docs, custom pages or external links by editing the navbar items in the themeConfig
-   section of `docusaurus.config.js`:
-
-`docusaurus.config.js`
-
-```javascript
-{
-  themeConfig: {
-    navBar: {
-      items: [
-        {
-          to: "/introduction", // url path to the landing page, 
-          label: "Classic",
-          position: "right",
-        },
-        {
-          to: "/next/introduction",
-          activeBasePath: "docs",
-          label: "Next",
-          position: "right",
-        },  
-        {
-          href: 'https://github.com/darklang/docs',
-          label: 'GitHub',
-          position: 'right',
-        },
-        ...
-      ]
-    }
-  }
-  ...
-}
-```
-
-For more information about the navigation bar, click
-[here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
-
-#### Checking formatting
-
-We run some tools to ensure that the docs are consistently formatted and to find
-common errors. If you run `npm run format` you should pass the linter.
-
-`markdownlint` is run automatically in CI - you can run it locally as
-`npm run lint`.
-
-## How CI Auto-deploys
-> [!TIP]
-> Consult the Akinpelumi for more information on this
-The `.circleci/config.yml` file describes the CircleCI configuration. It watches
-for commits/merges into the `main` branch, runs a script to generate the
-contents of `gh-pages`, and pushes `gh-pages` to GitHub.
-
-## Publishing Changes
-> [!TIP]
-> consult the Docusauraus Docs for this 
-
-
-
-
-> [!TIP]
-> Consult the docusauraus 
-
-
-
-
-
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
