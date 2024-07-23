@@ -28,10 +28,10 @@ export default function Home() {
         </div>
 
         <div class="product-buttons">
-          {{{form 'product' product=product }}}
+          {{#form 'product' product=product}}
             <button class="btn-primary">Add to Cart</button>
             <button class="btn-secondary">Buy Now</button>
-          {{{endform}}}
+          {{/form}}
         </div>
 
       </div>
