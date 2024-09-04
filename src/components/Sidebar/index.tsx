@@ -17,7 +17,7 @@ interface SubsType {
 interface Menus {
     title: string,
     path: string,
-    subs?: SubsType[] | undefined
+    subs: SubsType[] | undefined
 }
 
 
@@ -85,8 +85,8 @@ const Sidebar = ({ menus, title }: Readonly<{
                                             <div className="accordion-body py-0">
                                                 <ul className='p-0 m-0' style={{ listStyle: 'none' }}>
                                                     {menu.subs.map((nav, i) =>
-                                                        <li key={`sub-${i} `}>
-                                                            <Link href={`${menu.path}${nav.path} `} className={`${theme === 'dark' ? 'text-white' : ''} `}>
+                                                        <li key={`sub-${i}`} className='mb-2'>
+                                                            <Link href={`${menu.path}${nav.path}`} className={`${theme === 'dark' ? 'text-white' : ''} menu-item`}>
                                                                 {nav.title}
                                                             </Link>
                                                         </li>
@@ -98,7 +98,7 @@ const Sidebar = ({ menus, title }: Readonly<{
                                 </Fragment>
                                 :
                                 <p className='py-2 mb-0'>
-                                    <Link className={`${theme === 'dark' ? 'text-white' : ''}`} onClick={handleSidebarMenuClick} key={index} href={menu.path}>{menu.title}</Link>
+                                    <Link className={`${theme === 'dark' ? 'text-white' : ''} menu-item`} onClick={handleSidebarMenuClick} key={index} href={menu.path}>{menu.title}</Link>
                                 </p>
                             }
                         </Fragment>

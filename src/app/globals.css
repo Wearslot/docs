@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 15px;
 }
 
 a {
@@ -160,4 +161,8 @@ button:hover,
 button:active {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.menu-item:hover {
+  color: #8a50fc !important;
 }

@@ -17,13 +17,12 @@ export default function Home() {
 
   const codeString = `
       <div class="product-card">
-
         <div class="product-image">
           <img src="{{product.image}}" alt="Wrist watch" />
         </div>
 
         <div class="product-detail">
-          <h4>{{product.titlt}}</h4>
+          <h4>{{product.title}}</h4>
           <p>{{product.description}}</p>
         </div>
 
@@ -33,7 +32,6 @@ export default function Home() {
             <button class="btn-secondary">Buy Now</button>
           {{/form}}
         </div>
-
       </div>
   `;
 
@@ -66,10 +64,10 @@ export default function Home() {
           <div className={`col-lg-6 ${theme === 'dark' ? 'text-white' : ''}`}>
             <h1 className={`${styles.hero_h1} h1 mb-10 fw-bold`}>Start Building Amazing Digital Commerce Experiences</h1>
             <p className={styles.description}>Taojaa provides seamless tools and solution to help you build powerful storefronts
-              and e-commerce apps for your clients and business</p>
+              and e-commerce apps for your clients and businesses.</p>
             <div className="mt-5">
               <Link href={'/account/register'} className="btn btn-primary btn-lg fw-bold fs-6 py-4 px-5">Start Building <span>-&gt;</span></Link>
-              <Link href={`/docs`} className={`${theme === 'dark' ? 'text-white' : 'text-black'} ms-4`}><u>View Docs</u></Link>
+              <Link href={`/docs`} className={`${theme === 'dark' ? 'text-white' : 'text-black'} ms-4`}><u>View Documentation</u></Link>
             </div>
           </div>
           <div className={`col-lg-6 ${styles.codeblock}`}>
@@ -84,7 +82,7 @@ export default function Home() {
         <div className={`${styles.grid} ${theme === 'dark' ? 'text-white' : ''}`}>
 
           <Link
-            href="/docs/themes" scroll={false}
+            href="/docs/storefronts/themes" scroll={false}
             className={styles.card}
           >
             <h2>
@@ -94,7 +92,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/docs/headless"
+            href="/docs/storefronts/headless"
             className={styles.card}
           >
             <h2>
