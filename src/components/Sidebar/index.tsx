@@ -10,20 +10,24 @@ import { IoLogoGithub } from 'react-icons/io';
 import { BsFillBrightnessHighFill } from 'react-icons/bs';
 
 interface SubsType {
-    title: string,
-    path: string
+    title: string;
+    path: string;
 }
 
-interface Menus {
-    title: string,
-    path: string,
-    subs: SubsType[] | undefined
+export interface Menus {
+    title: string;
+    path: string;
+    subs?: SubsType[];
+    [key: string]: string | SubsType[] | undefined;
+}
+
+interface SidebarProps {
+    title: string;
+    menus: Menus[];  // Correctly type the 'menus' prop
 }
 
 
-const Sidebar = ({ menus, title }: Readonly<{
-    menus: Menus[], title: string
-}>) => {
+const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
 
     const { theme, sidebar, updateTheme, toggleSidebar } = useContext(AppProvider)
 

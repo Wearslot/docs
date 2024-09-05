@@ -19,7 +19,7 @@ export const menus = [
     },
     {
         title: "Storefronts",
-        path: "/docs/storefronts"
+        path: "/docs/storefronts",
     },
     {
         title: "Developer Tools",
@@ -27,26 +27,22 @@ export const menus = [
         subs: [
             {
                 title: "Overview",
-                path: ""
+                path: "",
             },
             {
                 title: "Partner Account",
-                path: "/partner-account"
+                path: "/partner-account",
             },
             {
                 title: "Taojaa CLI",
-                path: "/cli"
-            },
-            {
-                title: "Affluent",
-                path: "/affluent"
-            },
-        ]
+                path: "/cli",
+            }
+        ],
     },
     {
         title: "Authentication",
-        path: "/docs/authentication"
-    }
+        path: "/docs/authentication",
+    },
 ];
 
 export default function DocsPage() {
@@ -100,7 +96,7 @@ export default function DocsPage() {
 
                         </div>
 
-                        <Route {...routes}/>
+                        <Route {...routes} />
                     </div>
                     <div className='col-lg-3 ps-2'>
                         <div className={`border-start position-fixed ps-3 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>

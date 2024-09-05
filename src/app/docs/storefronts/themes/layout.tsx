@@ -11,7 +11,6 @@ const ThemesLayout = ({
         {
             title: "Overview",
             path: "/docs/storefronts/themes",
-            subs: undefined
         },
         {
             title: "Getting Started",
