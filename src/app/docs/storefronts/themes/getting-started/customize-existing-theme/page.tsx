@@ -18,8 +18,8 @@ const page = () => {
             url: '/docs/storefronts/themes/getting-started/build-new-theme'
         },
         next: {
-            name: 'Affluent Architecture',
-            url: '/docs/storefronts/themes/getting-started/customize-existing-theme'
+            name: 'Architecture',
+            url: '/docs/storefronts/themes/architecture'
         }
     }
 
