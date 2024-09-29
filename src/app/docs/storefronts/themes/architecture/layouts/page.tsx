@@ -68,8 +68,7 @@ const page = () => {
                         <div className='mb-5'>
                             <CodeBlock
                                 language='html'
-                                value={`
-<!DOCTYPE html>
+                                value={`<!DOCTYPE html>
 <html>
   <head>
     ...
@@ -89,8 +88,7 @@ const page = () => {
 
     <script type="text/javascript" src="{{asset_url}}/global.js" />
   </body>
- </html>
-`} />
+</html>`} />
                     </div>
                         
 
@@ -99,38 +97,24 @@ const page = () => {
                     <h4 className='fw-bold'>Usage</h4>
                     <div id='Usage' className={`${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
-                            You can create as many layout files as much as you need 
+                            You can create as many layout files as much as you need inside your theme's layout folder and the way to reference a particular layout in your template is by specifying the name 
+                            of the layout file inside your template.
                         </p>
-
                         
-                        <div className='mb-5'>
+                    <div className='mb-5'>
                             <CodeBlock
-                                language='json'
-                                value={`
-<!DOCTYPE html>
-<html>
-  <head>
-    ...
-    <link rel="stylesheet" href="{{asset_url}}/global.css" />
-    ...
-  </head>
-
-  <body>
-
-    {{{ sections "header-group" }}}
-
-    ...
-    {{{ content }}}
-    ...
-
-    {{{ sections "footer-group" }}}
-
-    <script type="text/javascript" src="{{asset_url}}/global.js" />
-  </body>
- </html>
-`} />
+                                language='javascript'
+                                value={`{
+    "layout": "main", // this template will be using the "main.html" layout file 
+    "sections": {
+        ...
+    },
+    "order": [],
+    "data": {
+        ...
+    }
+}`} />
                     </div>
-                        
 
                     </div>
 

@@ -9,6 +9,7 @@ import Sidebar from '@/components/Sidebar';
 import { AppProvider } from '@/contexts/AppContext';
 import Link from 'next/link';
 import Route from '@/components/Route';
+import { FiExternalLink } from 'react-icons/fi';
 
 const Storefront = () => {
 
@@ -32,18 +33,16 @@ const Storefront = () => {
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>
                         <p className='mt-2 mb-2'>Storefronts</p>
-                        <h1 className='fw-bold'>Taojaa Storefronts</h1>
+                        <h1 className='fw-bold'>Taojaa Storefront</h1>
 
                         <div id='Overview' className={`${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <p>
-                                Taojaa enables you to build storefronts for your online stores which allows you to personalize your brand and customers experiences.
-                            </p>
-                            <p>
-                                By building themes using Taojaa developer tools or go Headless with our RESTful APIs.
+                                Taojaa Storefronts helps you personalize your brand and customers experiences by building custom themes for your online stores using Taojaa <Link href={'/docs/dev-tools'} className='text-primary'>Developer Tools <FiExternalLink /></Link> or building headless storefronts 
+                                with <Link href={'/api/references/storefront'} className='text-primary'>Storefront APIs <FiExternalLink /></Link> 
                             </p>
                         </div>
 
-                        <div className={`row mt-3 mb-4 ${theme === 'dark' ? 'text-white' : ''}`}>
+                        <div className={`row mt-5 mb-5 ${theme === 'dark' ? 'text-white' : ''}`}>
                             <div className='col-md-6'>
                                 <div className={`${styles.card} p-3 rounded-2`}>
                                     <Link href={"/docs/storefronts/themes"}>

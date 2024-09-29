@@ -30,13 +30,21 @@ export const menus = [
                 path: "",
             },
             {
+                title: "Taojaa CLI",
+                path: "/cli",
+            },
+            {
+                title: "Theme Engine",
+                path: "/theme-engine",
+            },
+            {
+                title: "Affluent",
+                path: "/affluent",
+            },
+            {
                 title: "Partner Account",
                 path: "/partner-account",
             },
-            {
-                title: "Taojaa CLI",
-                path: "/cli",
-            }
         ],
     },
     {

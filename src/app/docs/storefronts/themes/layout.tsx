@@ -14,7 +14,7 @@ const ThemesLayout = ({
         },
         {
             title: "Getting Started",
-            path: '#',
+            path: '/docs/storefronts/themes',
             subs: [
                 {
                     title: "Overview",
@@ -32,7 +32,7 @@ const ThemesLayout = ({
         },
         {
             title: "Architecture",
-            path: '#',
+            path: '/docs/storefronts/themes',
             subs: [
                 {
                     title: "Overview",
@@ -79,7 +79,7 @@ const ThemesLayout = ({
             ]
         },
         {
-            title: "Monitize Themes",
+            title: "Themes Monitization",
             path: '#',
             subs: [
                 {
@@ -88,7 +88,7 @@ const ThemesLayout = ({
                 },
                 {
                     title: "Publish to Themes store",
-                    path: "/monitization/publish-t-themes-store"
+                    path: "/monitization/publish-to-themes-store"
                 }
             ]
         },

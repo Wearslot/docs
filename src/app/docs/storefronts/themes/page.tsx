@@ -37,8 +37,8 @@ const page = () => {
                             building storefront themes.
                         </p>
                         <p>
-                            <Link href={'/docs/dev-tools/affluent'} target='_blank' className='text-primary'>Affluent <FiExternalLink /></Link> is built using HTML, CSS, JavaScript & JSON, and powered by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link>
-                            for <Link href={''} className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
+                            <Link href={'/docs/dev-tools/affluent'} target='_blank' className='text-primary'>Affluent <FiExternalLink /></Link> is built using HTML, CSS, JavaScript & JSON, and powered 
+                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={''} className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
                         </p>
                     </div>
 

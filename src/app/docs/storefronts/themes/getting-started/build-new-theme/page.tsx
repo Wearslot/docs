@@ -27,7 +27,7 @@ const page = () => {
         <div className={`${theme === 'dark' ? 'text-white' : ''}`}>
             <div className='row'>
                 <div className='col-lg-9'>
-                    <p className='mt-2 mb-2'>Build Taojaa Themes</p>
+                    <p className='mt-2 mb-2'>Getting Started</p>
                     <h1 className='fw-bold'>Building a new storefront theme</h1>
 
                     <div id='Start' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
