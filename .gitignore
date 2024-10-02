@@ -9,6 +9,9 @@
 .cache-loader
 
 # Misc
+.next/
+.vercel/
+next-env*
 .DS_Store
 .env.local
 .env.development.local
