@@ -135,8 +135,9 @@ a {
   width: 84%;
   max-width: 84%;
   padding: 20px 50px;
+  padding-bottom: 150px;
   margin-left: 16%;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 @media (max-width: 1024px) {
@@ -165,4 +166,8 @@ button:active {
 
 .menu-item:hover {
   color: #8a50fc !important;
+}
+
+.footer li {
+  padding: 6px 0px !important;
 }

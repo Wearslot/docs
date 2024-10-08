@@ -109,7 +109,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
                     )}
                 </div>
 
-                <div className='sidebar-footer position-absolute bottom-0'>
+                <div className='sidebar-footer position-absolute bottom-0 d-md-none d-lg-none'>
                     <ul className='d-flex gap-2' style={{ listStyle: 'none' }}>
                         <li className="nav-item me-3">
                             <Link href="#" onClick={() => updateTheme((theme === "dark" ? "light" : "dark"))}>

@@ -5,6 +5,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import AppContext from "@/contexts/AppContext";
 import Script from 'next/script'
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <Header />
           {children}
+          <Footer />
           <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossOrigin="anonymous"></Script>
         </body>
       </html>
