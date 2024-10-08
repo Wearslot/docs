@@ -17,8 +17,8 @@ export const links = [
         path: "/docs"
     },
     {
-        name: "References",
-        path: "/references",
+        name: "API References",
+        path: "/api/references",
     },
     {
         name: "Community",
@@ -74,20 +74,32 @@ const NavBar = () => {
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item me-2">
                             <Link className="nav-link" href="#">
-                                <IoLogoGithub size={23} className={theme === 'dark' ? 'text-white' : ''} />
+                                <IoLogoGithub size={20} className={theme === 'dark' ? 'text-white' : ''} />
                             </Link>
                         </li>
                         <li className="nav-item me-3">
                             <Link className="nav-link" href="#" onClick={() => updateTheme((theme === "dark" ? "light" : "dark"))}>
                                 {theme === "light"
-                                    ? <IoMoonSharp size={20} />
-                                    : <BsFillBrightnessHighFill size={20} className={'text-white'} />}
+                                    ? <IoMoonSharp size={17} />
+                                    : <BsFillBrightnessHighFill size={17} className={'text-white'} />}
                             </Link>
                         </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     </form>
+                    <ul className="navbar-nav mb-2 mb-lg-0">
+                        <li className="nav-item me-2">
+                            <Link className={`nav-link ${theme === "dark" ? "text-white" : ''}`} href="/dashboard/sign-in">
+                                <span>Sign In</span>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className={`nav-link ${theme === "dark" ? "text-white" : ''}`} href="/dashboard/sign-up">
+                                <span>Sign Up</span>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

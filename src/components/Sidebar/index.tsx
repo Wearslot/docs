@@ -10,20 +10,24 @@ import { IoLogoGithub } from 'react-icons/io';
 import { BsFillBrightnessHighFill } from 'react-icons/bs';
 
 interface SubsType {
-    title: string,
-    path: string
+    title: string;
+    path: string;
 }
 
-interface Menus {
-    title: string,
-    path: string,
-    subs?: SubsType[] | undefined
+export interface Menus {
+    title: string;
+    path: string;
+    subs?: SubsType[];
+    [key: string]: string | SubsType[] | undefined;
+}
+
+interface SidebarProps {
+    title: string;
+    menus: Menus[];  // Correctly type the 'menus' prop
 }
 
 
-const Sidebar = ({ menus, title }: Readonly<{
-    menus: Menus[], title: string
-}>) => {
+const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
 
     const { theme, sidebar, updateTheme, toggleSidebar } = useContext(AppProvider)
 
@@ -85,8 +89,8 @@ const Sidebar = ({ menus, title }: Readonly<{
                                             <div className="accordion-body py-0">
                                                 <ul className='p-0 m-0' style={{ listStyle: 'none' }}>
                                                     {menu.subs.map((nav, i) =>
-                                                        <li key={`sub-${i} `}>
-                                                            <Link href={`${menu.path}${nav.path} `} className={`${theme === 'dark' ? 'text-white' : ''} `}>
+                                                        <li key={`sub-${i}`} className='mb-2'>
+                                                            <Link href={`${menu.path}${nav.path}`} className={`${theme === 'dark' ? 'text-white' : ''} menu-item`}>
                                                                 {nav.title}
                                                             </Link>
                                                         </li>
@@ -98,14 +102,14 @@ const Sidebar = ({ menus, title }: Readonly<{
                                 </Fragment>
                                 :
                                 <p className='py-2 mb-0'>
-                                    <Link className={`${theme === 'dark' ? 'text-white' : ''}`} onClick={handleSidebarMenuClick} key={index} href={menu.path}>{menu.title}</Link>
+                                    <Link className={`${theme === 'dark' ? 'text-white' : ''} menu-item`} onClick={handleSidebarMenuClick} key={index} href={menu.path}>{menu.title}</Link>
                                 </p>
                             }
                         </Fragment>
                     )}
                 </div>
 
-                <div className='sidebar-footer position-absolute bottom-0'>
+                <div className='sidebar-footer position-absolute bottom-0 d-md-none d-lg-none'>
                     <ul className='d-flex gap-2' style={{ listStyle: 'none' }}>
                         <li className="nav-item me-3">
                             <Link href="#" onClick={() => updateTheme((theme === "dark" ? "light" : "dark"))}>

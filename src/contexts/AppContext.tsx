@@ -4,10 +4,10 @@ import React, { createContext, useState, useEffect } from 'react';
 
 
 interface AppContextData {
-    theme: string,
-    sidebar: boolean,
-    updateTheme: (theme: string) => void,
-    toggleSidebar: (status: boolean) => void
+    theme: string;
+    sidebar: boolean;
+    updateTheme: (theme: string) => void;
+    toggleSidebar: (status: boolean) => void;
 }
 
 export const AppProvider = createContext<AppContextData>({ theme: 'light', sidebar: true, updateTheme: () => { }, toggleSidebar: () => { } })
