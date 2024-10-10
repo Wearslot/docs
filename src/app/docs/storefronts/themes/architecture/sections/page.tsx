@@ -7,7 +7,7 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 
-const page = () => {
+const Page= () => {
 
     const { theme } = useContext(AppProvider);
 
@@ -165,4 +165,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useContext } from 'react';
-import { menus } from '../page';
 import Sidebar from '@/components/Sidebar';
 import { AppProvider } from '@/contexts/AppContext';
 import Link from 'next/link';
@@ -28,7 +27,7 @@ const Authentication = () => {
 
     return (
         <div className='d-flex'>
-            <Sidebar title={'Documentation'} menus={menus} />
+            <Sidebar title={'Documentation'} />
             <div className='main-content'>
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>
@@ -45,7 +44,7 @@ const Authentication = () => {
                         <div className='alert alert-warning py-2 px-3 mb-5'>
                             <p><b>Pre-requisites:</b></p>
                             <ul className='m-0'>
-                                <li style={{ fontSize: 14 }}>Make sure you have the latest version of <Link href={'/docs/developer-tools/cli'} className='text-primary fw-bold'><u>Taojaa CLI</u></Link> installed. See <Link href={''} className='text-primary fw-bold'><u>Installation Guide</u></Link> on how to install the latest version.</li>
+                                <li style={{ fontSize: 14 }}>Make sure you have the latest version of <Link href={'/docs/dev-tools/cli'} className='text-primary fw-bold'><u>Taojaa CLI</u></Link> installed. See <Link href={'/docs/dev-tools/cli#Installation'} className='text-primary fw-bold'><u>Installation Guide</u></Link> on how to install the latest version.</li>
                             </ul>
                         </div>
 

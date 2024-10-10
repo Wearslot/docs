@@ -7,7 +7,7 @@ import Link from 'next/link';
 import React, { useContext } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 
-const page = () => {
+const Page= () => {
 
     const { theme } = useContext(AppProvider);
 
@@ -181,4 +181,4 @@ fetch('/add-to-cart', {
     );
 };
 
-export default page;
+export default Page;

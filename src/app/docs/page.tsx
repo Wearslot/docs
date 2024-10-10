@@ -8,51 +8,6 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import Route from '@/components/Route';
 
-export const menus = [
-    {
-        title: "Introduction",
-        path: "/docs",
-    },
-    {
-        title: "Getting Started",
-        path: '/docs/getting-started',
-    },
-    {
-        title: "Storefronts",
-        path: "/docs/storefronts",
-    },
-    {
-        title: "Developer Tools",
-        path: "/docs/dev-tools",
-        subs: [
-            {
-                title: "Overview",
-                path: "",
-            },
-            {
-                title: "Taojaa CLI",
-                path: "/cli",
-            },
-            {
-                title: "Theme Engine",
-                path: "/theme-engine",
-            },
-            {
-                title: "Affluent",
-                path: "/affluent",
-            },
-            {
-                title: "Partner Account",
-                path: "/partner-account",
-            },
-        ],
-    },
-    {
-        title: "Authentication",
-        path: "/docs/authentication",
-    },
-];
-
 export default function DocsPage() {
 
     const { theme } = useContext(AppProvider);
@@ -70,7 +25,7 @@ export default function DocsPage() {
 
     return (
         <div className='d-flex'>
-            <Sidebar title={'Documentation'} menus={menus} />
+            <Sidebar title={'Documentation'} />
             <div className='main-content'>
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>

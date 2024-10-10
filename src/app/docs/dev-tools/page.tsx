@@ -4,7 +4,6 @@
 import styles from '../../page.module.css';
 
 import React, { useContext } from 'react';
-import { menus } from '../page';
 import Sidebar from '@/components/Sidebar';
 import { AppProvider } from '@/contexts/AppContext';
 import Link from 'next/link';
@@ -28,7 +27,7 @@ const DevTools = () => {
 
     return (
         <div className='d-flex'>
-            <Sidebar title={'Documentation'} menus={menus} />
+            <Sidebar title={'Documentation'} />
             <div className='main-content'>
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>
@@ -38,7 +37,7 @@ const DevTools = () => {
                         <div id='Overview' className={`${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <p>
                                 Taojaa has provided a set of developers tools that helps make building amazing digital commerce experience simple. Most of these tools are also available
-                                on <Link href={''} target='_blank' className='text-primary'><i>Open Source <FiExternalLink /></i> </Link> for contributions and contineous improvement.
+                                on <Link href={''} target='_blank' className='text-primary'><i>Open Source <FiExternalLink /></i> </Link> for contributions and continuous improvement.
                             </p>
                         </div>
 
@@ -53,12 +52,9 @@ const DevTools = () => {
                             </div>
                             <div className='col-md-6'>
                                 <div className={`${styles.card} p-3 rounded-2`}>
-                                    <Link href={"/docs/dev-tools/theme-engine"}>
-                                        <h4>Theme Engine <span>-&gt;</span></h4>
-                                        <p>A flexible JavaScript engine that powers Taojaa themes on the storefront, powered
-                                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={''} className='text-primary'>NodeJS <FiExternalLink /></Link> applications
-                                            and frontend views.
-                                        </p>
+                                    <Link href={"/docs/dev-tools/affluent"}>
+                                        <h4>Affluent <span>-&gt;</span></h4>
+                                        <p>A simple developer base theme for bootstrapping a storefront theme project on Taojaa and also via the Taojaa CLI.</p>
                                     </Link>
                                 </div>
                             </div>
@@ -67,20 +63,23 @@ const DevTools = () => {
                         <div className={`row mt-3 mb-4 ${theme === 'dark' ? 'text-white' : ''}`}>
                             <div className='col-md-6'>
                                 <div className={`${styles.card} p-3 rounded-2`}>
-                                    <Link href={"/docs/dev-tools/affluent"}>
-                                        <h4>Affluent <span>-&gt;</span></h4>
-                                        <p>A simple developer base theme for bootstrapping a storefront theme project on Taojaa and also via the Taojaa CLI.</p>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className='col-md-6'>
-                                <div className={`${styles.card} p-3 rounded-2`}>
                                     <Link href={"/docs/dev-tools/partner-account"}>
                                         <h4>Partner Account <span>-&gt;</span></h4>
                                         <p>Partner accounts provides developers all the access needed to the information and resources to start building with Taojaa</p>
                                     </Link>
                                 </div>
                             </div>
+                            {/* <div className='col-md-6'>
+                                <div className={`${styles.card} p-3 rounded-2`}>
+                                    <Link href={"/docs/dev-tools/theme-engine"}>
+                                        <h4>Theme Engine <span>-&gt;</span></h4>
+                                        <p>A flexible JavaScript engine that powers Taojaa themes on the storefront, powered
+                                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications
+                                            and frontend views.
+                                        </p>
+                                    </Link>
+                                </div>
+                            </div> */}
                         </div>
 
                         <Route {...routes} />

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useContext } from 'react';
-import { menus } from '../page';
 import Sidebar from '@/components/Sidebar';
 import { AppProvider } from '@/contexts/AppContext';
 import Link from 'next/link';
@@ -25,7 +24,7 @@ const GettingStarted = () => {
 
     return (
         <div className='d-flex'>
-            <Sidebar title={'Documentation'} menus={menus} />
+            <Sidebar title={'Documentation'} />
             <div className='main-content'>
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>

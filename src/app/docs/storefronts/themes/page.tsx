@@ -8,7 +8,7 @@ import pStyles from "../../../page.module.css"
 import { FiExternalLink } from 'react-icons/fi';
 import Route from '@/components/Route';
 
-const page = () => {
+const Page= () => {
 
     const { theme } = useContext(AppProvider);
 
@@ -38,7 +38,7 @@ const page = () => {
                         </p>
                         <p>
                             <Link href={'/docs/dev-tools/affluent'} target='_blank' className='text-primary'>Affluent <FiExternalLink /></Link> is built using HTML, CSS, JavaScript & JSON, and powered 
-                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={''} className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
+                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
                         </p>
                     </div>
 
@@ -76,4 +76,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

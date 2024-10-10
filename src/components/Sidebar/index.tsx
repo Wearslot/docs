@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, useEffect, useState } from 'react';
 import styles from './index.module.css';
 import Link from 'next/link';
 import { AppProvider } from '@/contexts/AppContext';
@@ -23,7 +23,7 @@ export interface Menus {
 
 interface SidebarProps {
     title: string;
-    menus: Menus[];  // Correctly type the 'menus' prop
+    menus?: Menus[];  // Correctly type the 'menus' prop
 }
 
 
@@ -31,11 +31,58 @@ const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
 
     const { theme, sidebar, updateTheme, toggleSidebar } = useContext(AppProvider)
 
+    useEffect(() => {
+        if (menus) {
+            setMenuList(menus);
+        }
+    }, []);
+
     const handleSidebarMenuClick = () => {
         if (window.innerWidth <= 480) {
             toggleSidebar(false);
         }
     }
+
+    const [menusList, setMenuList] = useState<Menus[]>([
+        {
+            title: "Introduction",
+            path: "/docs",
+        },
+        {
+            title: "Getting Started",
+            path: '/docs/getting-started',
+        },
+        {
+            title: "Storefronts",
+            path: "/docs/storefronts",
+        },
+        {
+            title: "Developer Tools",
+            path: "/docs/dev-tools",
+            subs: [
+                {
+                    title: "Overview",
+                    path: "",
+                },
+                {
+                    title: "Taojaa CLI",
+                    path: "/cli",
+                },
+                {
+                    title: "Affluent",
+                    path: "/affluent",
+                },
+                {
+                    title: "Partner Account",
+                    path: "/partner-account",
+                },
+            ],
+        },
+        {
+            title: "Authentication",
+            path: "/docs/authentication",
+        },
+    ]);
 
     return (
         <div className={`${styles.sidebar} ${theme === 'light' ? 'bg-white' : 'bg-dark'} ${sidebar ? styles.open : ''}`}>
@@ -73,7 +120,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
 
                     <h6 className={`${styles.title} fw-bold ${theme === 'dark' ? 'text-white border-0' : ''} `}>{title}</h6>
 
-                    {menus.map((menu, index) =>
+                    {menusList.map((menu, index) =>
                         <Fragment key={index}>
                             {menu?.subs
                                 ? <Fragment>
