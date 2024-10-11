@@ -11,7 +11,7 @@ const Footer = (): JSX.Element => {
         <footer className={`pt-5 pb-3 footer ${theme === 'dark' ? 'bg-dark text-white' : 'border-top'}`}>
             <div className="container text-md-left">
                 <div className="row">
-                    <div className="col-md-6 mt-md-0 mt-3">
+                    <div className="col-md-6 mt-md-0 mt-3 mb-4">
                         <h5 className='fw-bold'>Taojaa Developers Guide</h5>
                         <p>All you need to start building amazing e-commerce experiences.</p>
                         {/* Social Links */}
@@ -20,9 +20,7 @@ const Footer = (): JSX.Element => {
                         <p className='mb-1'><a href='https://taojaa.com'><FiLink /> Visit <span className='text-primary'>Taojaa's website</span></a></p>
                     </div>
 
-                    <hr className="clearfix w-100 d-md-none pb-0" />
-
-                    <div className="col-md-3 mb-md-0 mb-3 navbar-nav">
+                    <div className="col-md-3 mb-md-0 mb-3">
                         <h6 className='fw-bold'>Resources</h6>
                         <ul className="list-unstyled">
                             <li><a href="#!">API Reference</a></li>

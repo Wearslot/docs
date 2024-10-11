@@ -65,7 +65,7 @@ const Authentication = () => {
 
                         <Route {...routes} />
                     </div>
-                    <div className='col-lg-3 ps-2'>
+                    <div className='col-lg-3 ps-2 d-sm-none d-md-block d-none'>
                         <div className={`border-start position-fixed ps-3 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <h6 style={{ fontSize: 14 }}>ON THIS PAGE</h6>
                             <Link href={"#Authentication"}><small style={{ fontSize: 13 }}>Authentication</small></Link>

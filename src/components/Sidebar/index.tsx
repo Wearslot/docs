@@ -72,10 +72,10 @@ const Sidebar: React.FC<SidebarProps> = ({ menus, title }) => {
                     title: "Affluent",
                     path: "/affluent",
                 },
-                {
-                    title: "Partner Account",
-                    path: "/partner-account",
-                },
+                // {
+                //     title: "Partner Account",
+                //     path: "/partner-account",
+                // },
             ],
         },
         {

@@ -7,15 +7,16 @@ import { AppProvider } from '@/contexts/AppContext';
 import Link from 'next/link';
 import Route from '@/components/Route';
 import { FiExternalLink } from 'react-icons/fi';
+import CodeBlock from '@/components/Code';
 
-const Affluent = () => {
+const HelperSyntaxes = () => {
 
     const { theme } = useContext(AppProvider);
 
     const routes = {
         previous: {
-            name: 'Developer Tools',
-            url: '/docs/dev-tools'
+            name: 'Affluent',
+            url: '/docs/dev-tools/affluent'
         },
         next: {
             name: null,
@@ -29,21 +30,28 @@ const Affluent = () => {
             <div className='main-content'>
                 <div className={`row ${theme === 'dark' ? 'text-white' : ''}`}>
                     <div className='col-md-9'>
-                        <p className='mt-2 mb-2'>Developer Tools</p>
-                        <h1 className='fw-bold' id='Overview'>Get Started Affluent</h1>
+                        <p className='mt-2 mb-2'>Devlooper Tools</p>
+                        <h1 className='fw-bold' id='Overview'>Affluent Helpers & Syntaxes</h1>
+
+                        <p className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            Taojaa theme engine supports handlebars syntaxes and below you'll find exmples of all the additional helpers Taojaa has created 
+                        </p>
 
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                            <p>
-                                Affluent is Taojaa developers base theme to bootstrap themes development for your Taojaa storefronts. Affluent run on a theme engine created by Taojaa which is powered by <Link href={'https://handlebarsjs.com/'} target='_blank' className='text-primary'>Handlebars <FiExternalLink /></Link> a JavaScript package for rendering views, the Affluent theme is also available
-                                on <Link href={'https://github.com/Wearslot/affluent'} target='_blank' className='text-primary'><i>Open Source <FiExternalLink /></i> </Link> for contributions and continuous improvement.
-                            </p>
+                            <CodeBlock language='javascript' value={`{
+  "product": {
+    "title": "Lofty Sneakers",
+    "description": "<p>Nice soft sneakers</p>"
+  }
+}`} />
                         </div>
 
-                        <h2 id='Architecture' className='fw-bold'>Architecture</h2>
+                        <h2 id='RenderingData' className='fw-bold'>Rendering Data </h2>
 
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                            <p>Affluent follows the same themes architecture and standard and allows you keep files in their respective directories with a better naming convention.
-                                See more details about <Link href={'/docs/storefronts/themes/architecture'} target='_blank' className='text-primary'><i>Storefront Themes Architecture <FiExternalLink /></i> </Link> </p>
+                        <CodeBlock language='html' value={`<h1>{{product.title}}</h1>
+{{{product.description}}}         // renders html string`
+} />
                         </div>
 
 
@@ -60,13 +68,13 @@ const Affluent = () => {
                         <div className={`border-start position-fixed ps-3 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <h6 style={{ fontSize: 14 }}>ON THIS PAGE</h6>
                             <p className='mb-1'>
-                                <Link href={"#Overview"}><small style={{ fontSize: 13 }}>Affluent</small></Link>
+                                <Link href={"#Overview"}><small style={{ fontSize: 13 }}>Affluent helpers & syntaxes</small></Link>
                             </p>
                             <p className='mb-1'>
-                            <Link href={"#Architecture"}><small style={{ fontSize: 13 }}>Architecture</small></Link>
+                                <Link href={"#RenderingData"}><small style={{ fontSize: 13 }}>Rendering Data</small></Link>
                             </p>
                             <p className='mb-1'>
-                            <Link href={"#SyntaxesAndHelpers"}><small style={{ fontSize: 13 }}>Helpers and Syntaxes</small></Link>
+                                <Link href={"#SyntaxesAndHelpers"}><small style={{ fontSize: 13 }}>Helpers and Syntaxes</small></Link>
                             </p>
                         </div>
                     </div>
@@ -76,4 +84,4 @@ const Affluent = () => {
     );
 };
 
-export default Affluent;
+export default HelperSyntaxes;

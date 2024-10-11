@@ -38,11 +38,11 @@ const Cli = () => {
                         <div id='Overview' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <p>
                                 Taojaa CLI tool provide developers with a set of commands to perform development and deployment tasks directly from the terminal. Taojaa CLI is built on <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> and also available
-                                on <Link href={''} target='_blank' className='text-primary'><i>Open Source <FiExternalLink /></i> </Link> for contributions and continuous improvement.
+                                on <Link href={'https://github.com/Wearslot/cli'} target='_blank' className='text-primary'><i>Open Source <FiExternalLink /></i> </Link> for contributions and continuous improvement.
                             </p>
                         </div>
 
-                        <h2>Installation</h2>
+                        <h2 id='Installation' className='fw-bold'>Installation</h2>
 
                         <div className='alert alert-warning py-2 px-3 mb-3 mt-3'>
                             <p><b>Pre-requisites:</b></p>
@@ -51,7 +51,7 @@ const Cli = () => {
                             </ul>
                         </div>
 
-                        <div id='Installation' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <p>Once you have NodeJS installed, follow these simple steps below to install Taojaa CLI tool on your local machine.</p>
 
                             <p>Run the NPM command to install Taojaa CLI globally on your machine</p>
@@ -63,8 +63,8 @@ const Cli = () => {
                             <CodeBlock language='bash' value={`$ taojaa --help`} />
                         </div>
 
-                        <h2>Update to latest version</h2>
-                        <div id='Updating' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                        <h2 id='Updating' className='fw-bold'>Update to latest version</h2>
+                        <div  className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <p>To update your existing Taojaa CLI to the latest version, simply uninstall the current version using the NPM uninstall command.</p>
                             <CodeBlock language='bash' value={`$ npm uninstall -g taojaa-cli`} />
                             <p>After you have successfully uninstall the current installed version, run the installation command specify <code>latest</code> tag to install the latest version.</p>
@@ -73,7 +73,7 @@ const Cli = () => {
 
                         <Route {...routes} />
                     </div>
-                    <div className='col-lg-3 ps-2'>
+                    <div className='col-lg-3 ps-2 d-sm-none d-md-block d-none'>
                         <div className={`border-start position-fixed ps-3 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <h6 style={{ fontSize: 14 }}>ON THIS PAGE</h6>
                             <Link href={"#Overview"}><small style={{ fontSize: 13 }}>Overview</small></Link>

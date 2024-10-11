@@ -66,8 +66,8 @@ export default function Home() {
             <p className={styles.description}>Taojaa provides seamless tools and solution to help you build powerful storefronts
               and e-commerce apps for your clients and businesses.</p>
             <div className="mt-5">
-              <Link href={'/account/register'} className="btn btn-primary btn-lg fw-bold fs-6 py-4 px-5">Start Building <span>-&gt;</span></Link>
-              <Link href={`/docs`} className={`${theme === 'dark' ? 'text-white' : 'text-black'} ms-4`}><u>View Documentation</u></Link>
+              <Link href={'https://partners.taojaa.com/account/register'} className="btn btn-primary btn-lg fw-bold fs-6 py-4 px-5">Start Building <span>-&gt;</span></Link>
+              <Link href={`/docs`} className={`${theme === 'dark' ? 'text-white' : 'text-black'} ms-4`}><u>View Docs</u></Link>
             </div>
           </div>
           <div className={`col-lg-6 ${styles.codeblock}`}>
