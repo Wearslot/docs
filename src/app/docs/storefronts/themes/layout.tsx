@@ -17,10 +17,6 @@ const ThemesLayout = ({
             path: '/docs/storefronts/themes',
             subs: [
                 {
-                    title: "Overview",
-                    path: "/getting-started"
-                },
-                {
                     title: 'Build new theme',
                     path: '/getting-started/build-new-theme'
                 },

@@ -74,7 +74,7 @@ const DevTools = () => {
                                     <Link href={"/docs/dev-tools/theme-engine"}>
                                         <h4>Theme Engine <span>-&gt;</span></h4>
                                         <p>A flexible JavaScript engine that powers Taojaa themes on the storefront, powered
-                                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications
+                                            by <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications
                                             and frontend views.
                                         </p>
                                     </Link>

@@ -34,32 +34,58 @@ const HelperSyntaxes = () => {
                         <h1 className='fw-bold' id='Overview'>Affluent Helpers & Syntaxes</h1>
 
                         <p className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                            Taojaa theme engine supports handlebars syntaxes and below you'll find exmples of all the additional helpers Taojaa has created 
+                            Taojaa theme engine supports all <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> syntaxes and below you'll find exmples of all the additional helpers Taojaa has created
                         </p>
 
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             <CodeBlock language='javascript' value={`{
   "product": {
     "title": "Lofty Sneakers",
-    "description": "<p>Nice soft sneakers</p>"
+    "description": "<p>Nice soft sneakers</p>",
+    "price": 10.00,
+    "in_stock": true
   }
 }`} />
                         </div>
 
-                        <h2 id='RenderingData' className='fw-bold'>Rendering Data </h2>
-
+                        <h2 id='RenderingData' className='fw-bold'>Rendering Data & Variables</h2>
+                        <p>To display contents on the storefront theme, you can use the <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> simple expressions.</p>
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                        <CodeBlock language='html' value={`<h1>{{product.title}}</h1>
-{{{product.description}}}         // renders html string`
-} />
+                            <CodeBlock language='html' value={`<h1>{{ product.title }}</h1>
+{{{ product.description }}}         // this would render a html string
+<span>{{ product.price }}</span>
+`} />
                         </div>
 
+                        <h2 id='Conditional-' className='fw-bold'>Operational & Conditional Helpers</h2>
+                        <p>You can also perform operations within your theme's HTML files using any of the <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> evaluation expressions
+                            and the additional helpers provided by the Taojaa theme engine.</p>
 
-                        <h2 id='SyntaxesAndHelpers' className='fw-bold'>Helpers and Syntaxes</h2>
+                        <p>We'll focus only on Taojaa theme engine additioanal helpers in this documentation.</p>
 
+                        <h5 className='fw-bold'>If Condition Helper</h5>
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                            <p>Taojaa theme engine supoorts all <Link href={'https://handlebarsjs.com/'} target='_blank' className='text-primary'>Handlebars <FiExternalLink /></Link> syntaxes and also provides additional helpers to simplify developments for developers.</p>
-                            <p>View available helper syntax examples <Link href={'affluent/helper-syntaxes'} target='_blank' className='text-primary'>here</Link></p>
+                            <CodeBlock language='html' value={`{{#ifCond product.in_stock '==' true}}
+    <!-- content goes here -->
+{{/ifCond}}`} />
+                        </div>
+
+                        <h5 className='fw-bold'>If-else Conditional Helper</h5>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={`{{#ifCond product.in_stock '==' true}}
+    <!-- content goes here -->
+{{else}}
+    <!-- content goes here -->
+{{/ifCond}}`} />
+                        </div>
+
+                        <h5 className='fw-bold'>Unless Conditional Helper</h5>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={`{{#ifCond product.in_stock '==' true}}
+    <!-- content goes here -->
+{{else}}
+    <!-- content goes here -->
+{{/ifCond}}`} />
                         </div>
 
                         <Route {...routes} />
@@ -71,10 +97,7 @@ const HelperSyntaxes = () => {
                                 <Link href={"#Overview"}><small style={{ fontSize: 13 }}>Affluent helpers & syntaxes</small></Link>
                             </p>
                             <p className='mb-1'>
-                                <Link href={"#RenderingData"}><small style={{ fontSize: 13 }}>Rendering Data</small></Link>
-                            </p>
-                            <p className='mb-1'>
-                                <Link href={"#SyntaxesAndHelpers"}><small style={{ fontSize: 13 }}>Helpers and Syntaxes</small></Link>
+                                <Link href={"#RenderingData"}><small style={{ fontSize: 13 }}>Rendering Data & Variable</small></Link>
                             </p>
                         </div>
                     </div>

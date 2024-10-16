@@ -15,7 +15,7 @@ const Page= () => {
     const routes = {
         previous: {
             name: 'Overview',
-            url: '/docs/storefronts/themes/getting-started'
+            url: '/docs/storefronts/themes'
         },
         next: {
             name: 'Customize Existing Theme',
@@ -44,7 +44,7 @@ const Page= () => {
                     <h4 className='fw-bold'>Initialize a new theme</h4>
                     <div id='Initilize' className={`${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
-                            Once you have setup all your enviroments and your development store, you can then use the <code>taojaa init</code> command to initialize a theme project as shown below.
+                            Once you have set up all your environments and your development store, you can then use the <code>taojaa init</code> command to initialize a theme project as shown below.
                         </p>
 
                         <CodeBlock language='bash' value={`$ taojaa init theme <your-theme-name>`} />
@@ -58,9 +58,9 @@ const Page= () => {
                         </p>
                         <CodeBlock language='bash' value={`$ taojaa theme dev --store <dev-store-name>`} />
                         <p className='mt-4'>
-                            You development store name is simple the subdomain name of your storefront url. When you setup a store Taojaa provides your a unique storefront domain, for example 
+                            You development store name is simple the subdomain name of your storefront URL. When you set up a store Taojaa provides a unique storefront domain, for example 
                             a furniture store named Furni will have <Link href={'https://furni.taojaa.shop'} target='_blank' className='text-primary'>furni.taojaa.shop <FiExternalLink /></Link> as
-                            it's storefront url while the <code>furni</code> is the development store name.
+                            it's storefront URL while the <code>furni</code> is the development store name.
                         </p>
                     </div>
 

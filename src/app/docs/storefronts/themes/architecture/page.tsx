@@ -30,7 +30,7 @@ const Page= () => {
 
                     <div id='Start' className={`mb-4 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
-                            Themes are structured and organized in folder with each folder containing specific related files and resources that are compactible with the Taojaa theme engine.
+                            Themes are structured and organized in folders with each folder containing specific related files and resources that are compactible with the Taojaa theme engine.
                         </p>
                     </div>
 

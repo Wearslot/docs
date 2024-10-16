@@ -14,8 +14,8 @@ const Page= () => {
 
     const routes = {
         next: {
-            name: 'Getting Started',
-            url: '/docs/storefronts/themes/getting-started'
+            name: 'Getting Started: Build a new theme',
+            url: '/docs/storefronts/themes/getting-started/build-new-theme'
         },
         previous: {
             name: null,
@@ -38,7 +38,7 @@ const Page= () => {
                         </p>
                         <p>
                             <Link href={'/docs/dev-tools/affluent'} target='_blank' className='text-primary'>Affluent <FiExternalLink /></Link> is built using HTML, CSS, JavaScript & JSON, and powered 
-                            by <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
+                            by <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> for <Link href={'https://nodejs.org/en'} target='_blank' className='text-primary'>NodeJS <FiExternalLink /></Link> applications and frontend views.
                         </p>
                     </div>
 

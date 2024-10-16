@@ -60,7 +60,7 @@ const Page= () => {
                     <h4 className='fw-bold'>Structure</h4>
                     <div id='Structure' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
-                            Section HTML files should always contain a standard HTML elements with <Link href={''} className='text-primary'>Handlebars.js <FiExternalLink /></Link> syntaxes or
+                            Section HTML files should always contain a standard HTML elements with <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> syntaxes or
                             any custom helper function that are provided by the Taojaa theme engine.
                         </p>
 
