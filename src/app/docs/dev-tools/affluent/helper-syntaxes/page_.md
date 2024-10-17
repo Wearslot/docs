@@ -141,7 +141,7 @@ Available form action types `product`,`remove-item`,`newsletter`,`search`,`apply
 ```hbs
 <!--  Example -->
 
-{{#form type:string key=value [props:string] }}
+{{#form type:string key=value [props:string (optional)] }}
     // code goes here
 {{/form}}
 ```

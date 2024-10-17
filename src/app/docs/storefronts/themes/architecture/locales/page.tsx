@@ -13,12 +13,12 @@ const Page= () => {
 
     const routes = {
         previous: {
-            name: 'Layouts',
-            url: '/docs/storefronts/themes/architecture/layouts'
+            name: 'Configs',
+            url: '/docs/storefronts/themes/architecture/configs'
         },
         next: {
-            name: 'Sections',
-            url: '/docs/storefronts/themes/architecture/sections'
+            name: 'Best Practices',
+            url: '/docs/storefronts/themes/best-practices'
         }
     }
 

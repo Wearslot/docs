@@ -42,18 +42,18 @@ const GettingStarted = () => {
 
                             <ol>
                                 <li>
-                                    <b>Developer/Partner's Account on Taojaa. </b> <Link href={'https://partners.taojaa.com'} target='_blank' className='text-primary'><i>Create Account <FiExternalLink /></i> </Link>
+                                    <b>Developer's Account on Taojaa. </b> <Link href={'https://developers.taojaa.com/account/signup'} target='_blank' className='text-primary'><i>Create Account <FiExternalLink /></i> </Link>
                                     <p>This provides the right access to resources and tools to build and publish themes and apps for the Taojaa store in development mode without any charges.</p>
                                 </li>
                                 <li>
-                                    <b>Setup a Development Store. </b> <Link href={'https://partners.taojaa.com/resources/setting-up-a-development-store'} target='_blank' className='text-primary'><i>Setup Store <FiExternalLink /></i> </Link>
-                                    <p>Create a free development store on your partners dashboard for your theme/app development and set it up with your sample products and store details. This can be converted to a live store when ready to go live.</p>
+                                    <b>Create and Setup a Development Store. </b> <Link href={'https://developers.taojaa.com/dashboard/create-development-store'} target='_blank' className='text-primary'><i>Create Development Store <FiExternalLink /></i> </Link>
+                                    <p>Create a free development store on your developers account dashboard for your project and set it up with your sample products and store information. This can be converted to a live store when ready to go live.</p>
                                 </li>
                                 <li>
                                     <b>Start Building. </b>
                                     <p>Now you are set and let's start building amazing digital commerce experiences.</p>
-                                    <p><Link href={'/docs/storefront/themes'} className='text-primary'><i>Build Storefront Themes <FiExternalLink /></i> </Link></p>
-                                    <p><Link href={'/docs/storefront/headless'} className='text-primary'><i>Build Headless Storefronts <FiExternalLink /></i> </Link></p>
+                                    <p><Link href={'/docs/storefronts/themes'} className='text-primary'><i>Build Storefront Themes</i> </Link></p>
+                                    <p><Link href={'/docs/storefronts/headless'} className='text-primary'><i>Build Headless Storefronts</i> </Link></p>
                                 </li>
                             </ol>
                         </div>

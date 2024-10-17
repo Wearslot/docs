@@ -33,7 +33,7 @@ const Page= () => {
                     <div id='Start' className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
                             You can build a new storefront theme for your store or for the Themes Store and monetize your themes on Taojaa.
-                            To start building themes on Taojaa make sure you have the latest version of <Link href={"/dev-tools/cli"} className='text-primary'>Taojaa CLI <FiExternalLink /></Link>&nbsp;
+                            To start building themes on Taojaa make sure you have the latest version of <Link href={"/docs/dev-tools/cli"} target='_blank' className='text-primary'>Taojaa CLI <FiExternalLink /></Link>&nbsp;
                         </p>
                     </div>
 

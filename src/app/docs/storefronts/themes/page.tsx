@@ -32,8 +32,8 @@ const Page= () => {
 
                     <div id='Overview' className={`${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                         <p>
-                            You can build new storefront themes or customize an existing storefront themes that has been installed on your Taojaa store using <Link href={"/dev-tools/cli"} className='text-primary'>Taojaa CLI <FiExternalLink /></Link>&nbsp;
-                            and <Link href={'/docs/dev-tools/affluent'} className='text-primary'>Affluent <FiExternalLink /></Link> a default developer theme on Taojaa for
+                            You can build new storefront themes or customize an existing storefront themes that has been installed on your Taojaa store using <Link href={"/dev-tools/cli"} target='_blank' className='text-primary'>Taojaa CLI <FiExternalLink /></Link>&nbsp;
+                            and <Link href={'/docs/dev-tools/affluent'} target='_blank' className='text-primary'>Affluent <FiExternalLink /></Link> a default developer theme on Taojaa for
                             building storefront themes.
                         </p>
                         <p>

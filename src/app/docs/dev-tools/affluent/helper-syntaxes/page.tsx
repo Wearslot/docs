@@ -36,7 +36,7 @@ const HelperSyntaxes = () => {
                         <p className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
                             Taojaa theme engine supports all <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> syntaxes and below you'll find examples of all the additional helpers added to the Taojaa theme engine.
                         </p>
-                        
+
                         <p>This documentation will focus only on Taojaa theme engine additioanal helpers, to see available helpers and syntaxes provided by Handlebars, kindly visit <Link href={'https://handlebarsjs.com/'} className='text-primary'>Handlebars.js <FiExternalLink /></Link> official documentation.</p>
 
                         <p>
@@ -280,7 +280,7 @@ const HelperSyntaxes = () => {
                 {{#variantOptions this}}
                     <li> 
                         <label> 
-                            <input type="checkbox" value="{{id}}" /> {{ name }}
+                            <input type="checkbox" value="{{id}}" /> <span>{{ name }}</span>
                         <label/>
                     </li>
                 {{/variantOptions}}
@@ -289,6 +289,74 @@ const HelperSyntaxes = () => {
     </div>
 {{/variations}}`} />
                         </div>
+
+                        <h5 id='Widgets-Helper' className='fw-bold'>widgets Helper</h5>
+                        <p>Unlike other iterators the <code>widgets</code> helper is mainly used to iterate over widgets that are provided in your template sections and makes sure they are accessible while using the theme editor to update your widget settings.</p>
+                        <p>The <code>widgets</code> helper takes one required parameter which is the widgets object in your section context, and each widget can be accessed during the interation using <code>widget</code> variable or any name provided using the <code>as</code> key</p>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={`{{#widgets section.widgets}}
+    <!-- content goes here -->
+{{/widgets}}
+
+<!-- or -->
+
+{{#widgets section.widgets as="mywidgetvariable"}}
+    <!-- content goes here -->
+{{/widgets}}`} />
+                        </div>
+
+                        <h2 id='Forms' className='fw-bold'>Forms</h2>
+                        <p>Taojaa theme engine provides a set of form helpers to help create action forms inside your storefront theme, with the <code>form</code> helper you can create
+                            an action form to submit specific requests on the storefront.
+                        </p>
+                        <p>Available form action types <code>`product`,`remove-item`,`newsletter`,`search`,`apply-coupon`,`remove-coupon`,`contact`,`review`,`wishlist`,`login`,`logout`,`forgot-password`,`reset-password`</code></p>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={` <!-- Form helper -->
+{{#form [type:string] [props:string (optional)]}}
+    <!-- content goes here -->
+{{/form}}`} />
+                        </div>
+                        
+                        <h5 id='Product-Form' className='fw-bold'>Product Form</h5>
+                        <p>Product form type is used to build an add-to-cart action form for specific product on the storefront, which enables storefront users add items to cart on your store.</p>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={` <!-- This form will add an item to cart -->
+{{#form "product" product=product 'id="add-to-cart" class="form"' }}
+    <input type="number" name="quantity" id="quantity" value="1" />
+
+    <input type="number" name="variant_id" id="variant_id" 
+        value="{{product.default_or_selected_variant_id}}" />
+
+    <button type="submit">
+        Add to Cart
+    </button>
+{{/form}}`} />
+                        </div>
+
+                        <h5 id='Remove-Item-Form' className='fw-bold'>Remove Item Form</h5>
+                        <p>Remove item form type is used to build a remove-from-cart action form for an item that has been added to cart on the storefront, which enables storefront users remove items from cart on your store.</p>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={` <!-- this form will remove from cart -->
+{{#form "remove-item" item=cart.items[0]}}
+    <button type="submit">
+        Remove Item
+    </button>
+{{/form}}`} />
+                        </div>
+
+                        <h5 id='Newsletter-Form' className='fw-bold'>Newsletter Form</h5>
+                        <p>Newsletter form type helps create a subscribe to newsletter form action on your storefront</p>
+                        <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
+                            <CodeBlock language='html' value={`<!-- This form will create a subscribe to newsletter action form -->
+{{#form "newsletter"}}
+    <input type="email" name="email" id="email" placeholder="Your e-mail" />
+
+    <button type="submit">
+        Subscribe
+    </button>
+{{/form}}`} />
+                        </div>
+
 
                         <Route {...routes} />
                     </div>
@@ -303,33 +371,48 @@ const HelperSyntaxes = () => {
                             </p>
                             <p className='mb-1'>
                                 <Link href={"#Operations-&-Conditional-Helpers"}><small style={{ fontSize: 13 }}>Operations & Conditional Helpers</small></Link>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#If-Condition"}><small style={{ fontSize: 13 }}>If Condition</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#If-Condition"}><small style={{ fontSize: 11 }}>If Condition</small></Link>
                                 </p>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#If-Else-Condition"}><small style={{ fontSize: 13 }}>If-Else Condition</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#If-Else-Condition"}><small style={{ fontSize: 11 }}>If-Else Condition</small></Link>
                                 </p>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#Unless-Helper"}><small style={{ fontSize: 13 }}>Unless Helper</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Unless-Helper"}><small style={{ fontSize: 11 }}>Unless Helper</small></Link>
                                 </p>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#Incudes-Helper"}><small style={{ fontSize: 13 }}>Includes Helper</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Incudes-Helper"}><small style={{ fontSize: 11 }}>Includes Helper</small></Link>
                                 </p>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#InCart-Helper"}><small style={{ fontSize: 13 }}>InCart Helper</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#InCart-Helper"}><small style={{ fontSize: 11 }}>InCart Helper</small></Link>
                                 </p>
                             </p>
                             <p className='mb-1'>
                                 <Link href={"#Loops-&-Iterators"}><small style={{ fontSize: 13 }}>Loops & Iterators</small></Link>
-                                <p className='mb-1 ms-2'>
-                                    <Link href={"#Iterate-Helper"}><small style={{ fontSize: 13 }}>Iterate Helper</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Iterate-Helper"}><small style={{ fontSize: 11 }}>Iterate Helper</small></Link>
+                                </p>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Variations-Helper"}><small style={{ fontSize: 11 }}>Variations Helper</small></Link>
+                                </p>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Widgets-Helper"}><small style={{ fontSize: 11 }}>Widgets Helper</small></Link>
+                                </p>
+                            </p>
+                            <p className='mb-1'>
+                                <Link href={"#Forms"}><small style={{ fontSize: 13 }}>Forms</small></Link>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Product-Form"}><small style={{ fontSize: 11 }}>Product Form</small></Link>
+                                </p>
+                                <p className='mb-1 ms-3'>
+                                    <Link href={"#Remove-Item"}><small style={{ fontSize: 11 }}>Remove Item</small></Link>
                                 </p>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

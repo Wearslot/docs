@@ -50,7 +50,7 @@ const Page= () => {
     ├── assets
     ├── components
     |   ├── cart-item.html
-    |   ├── loader.json
+    |   ├── loader.html
     |   ├── payment-buttons.html
     ├── ...
     ├── layouts
