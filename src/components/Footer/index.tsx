@@ -23,7 +23,7 @@ const Footer = (): JSX.Element => {
                     <div className="col-md-3 mb-md-0 mb-3">
                         <h6 className='fw-bold'>Resources</h6>
                         <ul className="list-unstyled">
-                            <li><a href="#!">API Reference</a></li>
+                            <li><a href="#!">API References</a></li>
                             <li><a href="#!">Blog</a></li>
                             <li><a href="#!">Partners Guide</a></li>
                             <li><a href="#!">Help & support</a></li>

@@ -20,6 +20,7 @@ const AppContext = ({ children }: Readonly<{
     const [sidebar, setSidebar] = useState<boolean>(true);
 
     const updateTheme = (theme: string) => {
+        window.localStorage.setItem("theme", theme);
         setTheme(theme);
         return;
     }
@@ -30,6 +31,7 @@ const AppContext = ({ children }: Readonly<{
     }
 
     useEffect(() => {
+        setTheme(window.localStorage.getItem("theme") || 'light');
         window.innerWidth <= 480 ? setSidebar(false) : setSidebar(true);
     }, [])
 

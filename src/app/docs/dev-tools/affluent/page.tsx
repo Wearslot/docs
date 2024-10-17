@@ -50,7 +50,7 @@ const Affluent = () => {
                         <h2 id='SyntaxesAndHelpers' className='fw-bold'>Helpers and Syntaxes</h2>
 
                         <div className={`mb-5 ${theme === 'dark' ? 'text-white' : 'text-muted'}`}>
-                            <p>Taojaa theme engine supoorts all <Link href={'https://handlebarsjs.com/'} target='_blank' className='text-primary'>Handlebars <FiExternalLink /></Link> syntaxes and also provides additional helpers to simplify developments for developers.</p>
+                            <p>Taojaa theme engine supoorts all <Link href={'https://handlebarsjs.com/'} target='_blank' className='text-primary'>Handlebars <FiExternalLink /></Link> syntaxes and also provides additional helpers to help simplify development for developers.</p>
                             <p>View available helper syntax examples <Link href={'affluent/helper-syntaxes'} target='_blank' className='text-primary'>here</Link></p>
                         </div>
 
